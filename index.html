@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVANG.IN - My Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .name {
+            font-size: 2em;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1em;
+            font-weight: 400;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 18px 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            background: white;
+        }
+
+        .link-card:active {
+            transform: scale(0.98);
+        }
+
+        .link-icon {
+            font-size: 1.5em;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .link-card:nth-child(1) .link-icon {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .link-card:nth-child(2) .link-icon {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .link-card:nth-child(3) .link-icon {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .link-card:nth-child(4) .link-icon {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+        }
+
+        .link-card:nth-child(5) .link-icon {
+            background: linear-gradient(135deg, #fa709a, #fee140);
+        }
+
+        .link-text {
+            text-align: left;
+        }
+
+        .link-title {
+            display: block;
+            color: #333;
+        }
+
+        .link-desc {
+            font-size: 0.75em;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .link-arrow {
+            margin-left: auto;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            color: #667eea;
+        }
+
+        .link-card:hover .link-arrow {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .footer {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85em;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: white;
+            color: #667eea;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 480px) {
+            .name {
+                font-size: 1.6em;
+            }
+
+            .link-card {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="avatar">🚀</div>
+            <h1 class="name">CVANG.IN</h1>
+            <p class="tagline">My Projects & Tools</p>
+        </div>
+
+        <div class="links">
+            <a href="https://ntqueprince.github.io/workshop/" class="link-card" target="_blank">
+                <span class="link-icon">🔧</span>
+                <span class="link-text">
+                    <span class="link-title">Workshop</span>
+                    <span class="link-desc">Tools & Utilities</span>
+                </span>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="https://ntqueprince.github.io/wp/" class="link-card" target="_blank">
+                <span class="link-icon">📝</span>
+                <span class="link-text">
+                    <span class="link-title">WP Tools</span>
+                    <span class="link-desc">WordPress Resources</span>
+                </span>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="https://ntqueprince.github.io/CVANG_VAHAN/" class="link-card" target="_blank">
+                <span class="link-icon">🚗</span>
+                <span class="link-text">
+                    <span class="link-title">CVANG VAHAN</span>
+                    <span class="link-desc">Vehicle Management</span>
+                </span>
+                <span class="link-arrow">→</span>
+            </a>
+        </div>
+
+        <div class="footer">
+            <div class="social-links">
+                <a href="https://github.com/ntqueprince" class="social-link" target="_blank" title="GitHub">
+                    💻
+                </a>
+            </div>
+            <p style="margin-top: 15px;">© 2024 CVANG.IN</p>
+        </div>
+    </div>
+</body>
+
+</html>
